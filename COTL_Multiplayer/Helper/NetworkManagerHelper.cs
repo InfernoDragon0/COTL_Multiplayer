@@ -36,4 +36,16 @@ public static class NetworkManagerHelper
         Plugin.Instance?.NetworkManager.GetComponent<NetworkManagerCOTL>().StartClient(uri);
         Plugin.Instance?.Logger.LogInfo("Joining " + uri);
     }
+
+    public static void LeaveServer()
+    {
+        Plugin.Instance?.NetworkManager.GetComponent<NetworkManagerCOTL>().StopClient();
+        Plugin.Instance?.Logger.LogInfo("Leaving server");
+    }
+
+    public static void CloseServer()
+    {
+        Plugin.Instance?.NetworkManager.GetComponent<NetworkManagerCOTL>().StopHost();
+        Plugin.Instance?.Logger.LogInfo("Closing server");
+    }
 }

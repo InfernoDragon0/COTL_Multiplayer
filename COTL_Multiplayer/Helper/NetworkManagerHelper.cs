@@ -19,7 +19,7 @@ public static class NetworkManagerHelper
 
 
         managerScript.transport = steamworks;
-        managerScript.offlineScene = ""; //TODO find the main menu scene name
+        managerScript.offlineScene = "Main Menu"; //TODO find the main menu scene name
         managerScript.onlineScene = "Base Biome 1";
 
         networkManager.SetActive(true);

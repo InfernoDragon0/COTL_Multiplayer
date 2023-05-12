@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <Guid>io.github.xhayper.COTL_Multiplayer</Guid>
         <Product>COTL_Multiplayer</Product>
@@ -32,6 +32,12 @@
         </Reference>
         <Reference Include="Telepathy">
             <HintPath>..\Packages\Mirror\Telepathy.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="FizzySteamworks">
+            <HintPath>..\Packages\FizzySteamworks\FizzySteamworks.dll</HintPath>
         </Reference>
     </ItemGroup>
 </Project>

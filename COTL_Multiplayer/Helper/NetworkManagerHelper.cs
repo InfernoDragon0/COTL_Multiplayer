@@ -17,9 +17,21 @@ public static class NetworkManagerHelper
         var managerHud = networkManager.AddComponent<NetworkManagerHUD>();
         var steamworks = networkManager.AddComponent<FizzySteamworks>();
 
+
         managerScript.transport = steamworks;
 
         networkManager.SetActive(true);
         return networkManager;
+    }
+
+    public static void RunAsHost()
+    {
+        Plugin.Instance?.NetworkManager.GetComponent<NetworkManagerCOTL>().StartHost();
+    }
+
+    public static void JoinServer(Uri uri)
+    {
+        Plugin.Instance?.NetworkManager.GetComponent<NetworkManagerCOTL>().StartClient(uri);
+        Plugin.Instance?.Logger.LogInfo("Joining " + uri);
     }
 }
